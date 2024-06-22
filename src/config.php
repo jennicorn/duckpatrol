@@ -1,15 +1,14 @@
 <?php
-//INITIALIZER SCRIP CONFIG
-// define custom root folder
-// if no folder is specified the folder with the composer.json will be
-// chosen as root
-$_CONF['root'] = ''; //absPath e.g. 'C:\xampp\htdocs\secureProject\testRoot';
+// INITIALIZER SCRIPT CONFIG
 
-// files explicitly not to protect against csrf
+// Define the custom root folder. If no folder is specified, the outermost folder with the composer.json will be chosen as root.
+$_CONF['root'] = ''; // Absolute path, e.g., 'C:\xampp\htdocs\secureProject\testRoot';
+
+// Files and folders explicitly not to protect against CSRF
 $_CONF['ignoreList'] = [
-    'folder' => [''], //FROM root e.g. 'folder' => ['testFolder']
-    'files' => [''] //FROM rot e.g. 'files' => ['testFolder2/testFile.php', 'testFile2.php']
+    'folder' => [], // From root, e.g., 'folder' => ['testFolder']
+    'files' => [] // From root, e.g., 'files' => ['testFolder2/testFile.php', 'testFile2.php']
 ];
 
-// page to point at for unauthorized requests
-$_CONF['landingPage'] = 'invalidForm.php'; //FROM ROOT  e.g. 'invalidForm.php'
+// Page to redirect to for unauthorized requests
+$_CONF['landingPage'] = ''; // From root, e.g., 'invalidForm.php'
