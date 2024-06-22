@@ -1,0 +1,13 @@
+{
+    "name": "jennchen/duckpatrol",
+    "description": "DuckPatrol is a PHP library designed to automatically protect your web applications from Cross-Site Request Forgery (CSRF) attacks.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jennchen\\Duckpatrol\\": "src/"
+        }
+    },
+    "minimum-stability": "beta",
+    "require": {}
+}
