@@ -1,6 +1,6 @@
 <?php
 
-namespace duckpatrol\src\Middleware;
+namespace Jennchen\Duckpatrol\Middleware;
 
 class DuckPatrol
 {

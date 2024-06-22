@@ -1,6 +1,6 @@
 <?php
 
-namespace duckpatrol\src\Middleware;
+namespace Jennchen\Duckpatrol\Middleware;
 
 require_once __DIR__ . '\..\config.php';
 require_once 'DuckPatrol.php';

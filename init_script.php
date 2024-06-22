@@ -1,6 +1,6 @@
 <?php
 
-use duckpatrol\src\Initializer\Initializer;
+use Jennchen\Duckpatrol\Initializer\Initializer;
 
 require_once 'src/config.php';
 require_once 'src/Initializer/Initializer.php';

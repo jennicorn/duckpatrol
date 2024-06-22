@@ -1,6 +1,6 @@
 <?php
 
-use duckpatrol\src\Middleware\DuckPatrolMiddleware;
+use Jennchen\Duckpatrol\Middleware\DuckPatrolMiddleware;
 
 require_once __DIR__ . '\..\Middleware\DuckPatrolMiddleware.php';
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace duckpatrol\src\Initializer;
+namespace Jennchen\Duckpatrol\Initializer;
 
 use DirectoryIterator;
 use ErrorException;
@@ -21,11 +21,8 @@ class Initializer
         $this->validateInputs($ignoreList, $root);
         $this->ignoreList = $ignoreList;
         $this->root = $this->defineRoot($root);
-        var_dump($this->root);
         $this->adjustIgnoreList();
         $this->dirRecursive($this->root);
-        var_dump($this->filePathList);
-        var_dump($ignoreList);
         $this->modifyFiles();
     }
 
