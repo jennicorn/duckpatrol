@@ -64,12 +64,6 @@ class Initializer
      * @param string $root The custom root directory.
      * @return string The determined root directory.
      */
-    /**
-     * Defines the root directory. If no custom root is specified, the folder with the composer.json file will be used.
-     *
-     * @param string $root The custom root directory.
-     * @return string The determined root directory.
-     */
     private function defineRoot(string $root): string
     {
         $currentDir = realpath(__DIR__);
@@ -77,7 +71,7 @@ class Initializer
 
         // Traverse up the directory tree to find the outermost directory containing composer.json
         while ($currentDir && $currentDir !== dirname($currentDir)) {
-            if (file_exists($currentDir . '/composer.json') && strpos($currentDir, 'duckpatrol') === false) {
+            if (file_exists($currentDir . '/composer.json') && strpos($currentDir, 'vendor') === false) {
                 $outermostDir = $currentDir;
             }
             $currentDir = dirname($currentDir);
@@ -86,7 +80,6 @@ class Initializer
         // Return the custom root if specified, otherwise the outermost directory or the current directory
         return $root ?: ($outermostDir ?: realpath(__DIR__));
     }
-
 
     /**
      * Converts relative paths in the ignore list to absolute paths.
@@ -317,5 +310,4 @@ class Initializer
             }
         }
     }
-
 }
