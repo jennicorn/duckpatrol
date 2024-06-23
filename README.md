@@ -9,11 +9,10 @@ Automatisierung bereitstellt.
 
 ## Voraussetzungen 
  - PHP 7.4 oder höher
- - Composer
+ - Composer Installation
  - Zu schützende Formulare müssen mit der POST Methode versendet werden 
  - Um das Skript ausführen zu können müssen am Zielsystem Schreibberechtigungen für den
 php Prozess erlaubt sein
- - output_buffering muss in deiner `php.ini` aktiviert sein
 
 
 ## Installation
