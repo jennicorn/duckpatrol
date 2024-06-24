@@ -1,51 +1,69 @@
-# DuckPatrol: CSRF Protection Library
+# DuckPatrol: CSRF Schutzbibliothek
 
-## Overview
-DuckPatrol is a PHP library developed to protect your plain PHP web applications from Cross-Site Request Forgery (CSRF) attacks. It offers a simple way to integrate CSRF protection into your projects by using Composer and providing a script for automation.
+## Überblick
+DuckPatrol ist eine PHP-Bibliothek, die entwickelt wurde, um deine plain PHP Webanwendungen vor
+Cross-Site Request Forgery (CSRF) Angriffen zu schützen. Sie bietet eine einfache Möglichkeit,
+CSRF-Schutz in deine Projekte zu integrieren, indem sie Composer verwendet und ein Skript zur 
+Automatisierung bereitstellt. 
 
-## Requirements
-- PHP 7.4 or higher
-- Composer installation
-- Forms to be protected must be sent using the POST method
-- To run the script, write permissions must be allowed for the PHP process on the target system
+
+## Voraussetzungen 
+ - PHP 7.4 oder höher
+ - Composer Installation
+ - Zu schützende Formulare müssen mit der POST-Methode versendet werden 
+ - Um das Skript ausführen zu können, muss der PHP-Prozess auf dem Zielsystem über die erforderlichen
+Schreibberechtigungen verfügen
+
 
 ## Installation
-Install DuckPatrol with Composer:
+Installiere DuckPatrol mit Composer:
 
 ```sh
 composer require jennchen/duckpatrol
 ```
 
-## Usage
-There are two ways to initialize the DuckPatrol library.
+## Nutzung
+Um die DuckPatrol-Bibliothek zu initialisieren, gibt es zwei Möglichkeiten.
 
-### Manual Initialization
-One way is to manually integrate DuckPatrol into all pages you want to protect from CSRF attacks. You can do this by including the `bootstrap.php` file:
+
+### Manuelle Initialisierung
+Zum einen kannst du DuckPatrol manuell in alle Seiten einbauen, die du vor CSRF-Angriffen 
+schützen willst. Dies erreichst du, indem du dir `bootstrap.php`-Datei einbindest: 
 
 ```php
 require_once 'path/to/vendor/jennchen/duckpatrol/bootstrap.php';
 ```
 
-### Automatic Initialization
-The other way is to use the `init_script.php`. This script searches your entire project for PHP files that contain an HTML form with the POST method. In all these files, the `bootstrap.php` file will be automatically included.
+### Automatische Initialisierung
+Die andere Möglichkeit ist es, das `init_script.php` zu verwenden. Dieses durchsucht dein 
+gesamtes Projekt nach PHP-Files, die ein HTML-Formular mit der Methode POST beinhalten ab. In all 
+diesen wird nun voll automatisch das `bootstrap.php`-File eingebunden.
 
-To run the script, you need to navigate to the DuckPatrol folder, which is located in the vendor directory under 'jennchen'. Once you are in the library directory, you can run the script as follows:
+Um das Skript auszuführen, musst du in den duckpatrol Ordner navigieren, dieser befindet sich im
+vendor-Verzeichnis unter 'jennchen'. Bist du im Verzeichnis der Library kannst du das Skript wie 
+folgt ausführen: 
 
 ```sh
 php init_script.php
 ```
 
-### Script Configuration
-If you want to set a custom root directory or exclude certain files from the script's process, you can do this in the `config.php`. All information on this can be found in the configuration file itself.
+### Konfiguration des Skriptes
+Willst du ein Custom-Root Verzeichnis festlegen, oder gewisse Dateien aus dem Ablauf des Skriptes 
+entfernen, kannst du das in der `config.php` tun. Alle Infos dazu findest du in der 
+Konfigurationsdatei selbst 
 
-## Acknowledgements
-Thanks to everyone who supported me greatly during the creation of this library. A special thanks goes to:
-- Michael Kraftl
-- Michael Wagner
-- and everyone who helped with the name search <3
+## Danksagung
+Dank an alle, die mich bei der Entstehung dieser Library so großartig unterstützt haben. Ein 
+besonderer Dank geht an: 
+ - Michael Kraftl
+ - Michael Wagner
+ - und alle, die bei der Namenssuche geholfen haben <3
 
-## Author
-**Jennifer Kraftl** - *Developer* - [GitHub](https://github.com/jennicorn)
 
-## License
-This library is open-source software licensed under the MIT License.
+## Autor
+**Jennifer Kraftl** - *Developerin* - [GitHub](https://github.com/jennicorn)
+
+
+## Lizenz
+Diese Bibliothek ist Open-Source-Software, die unter der MIT-Lizenz lizenziert ist.
+

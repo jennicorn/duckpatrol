@@ -1,5 +1,4 @@
 <?php
-// INITIALIZER SCRIPT CONFIG
 
 // Define the custom root folder. If no folder is specified, the outermost folder with the composer.json will be chosen as root.
 $_CONF['root'] = ''; // Absolute path, e.g., 'C:\xampp\htdocs\secureProject\testRoot';

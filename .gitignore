@@ -11,5 +11,4 @@ composer.phar
 # Ignore IntelliJ IDEA project files
 .idea/
 
-# Commit your application's lock file
 composer.lock
